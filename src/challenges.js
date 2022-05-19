@@ -1,33 +1,37 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(number1, number2) {
+  if (number1 === true && number2 === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) /2 
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  frase2 = frase.split(" ");
+  return frase2;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(frase) {
+  return (frase[frase.length-1] + ", " + frase[0]);
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  
 }
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
@@ -64,4 +68,3 @@ module.exports = {
   splitSentence,
   techList,
 };
-//begin
