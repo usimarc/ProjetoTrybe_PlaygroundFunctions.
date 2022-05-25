@@ -1,6 +1,29 @@
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let nunn = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let result;
+
+ 
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.'
+  }
+
+  for (valor of array){
+    if (valor < 0 || valor > 9) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
+    nunn[valor] = nunn[valor] + 1;
+  }
+
+  for(valor of nunn){
+    if (valor >= 3){
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+
+  
+  result = "("+ array.slice(0,2).join('') + ") " + array.slice(2,7).join('') + "-" + array.slice(7,11).join('');
+  return result;
 }
 
 // Desafio 12
